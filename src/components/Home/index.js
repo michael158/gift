@@ -1,18 +1,27 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
-import './index.css'
+
 
 import Button from 'react-bootstrap/Button'
+import Moment from 'react-moment';
 
 import { FaHeart } from 'react-icons/fa';
 
 import Heart from './../../assets/img/heart.png';
 import Gift from './../../assets/pdf/gift.pdf';
 
+import 'moment-timezone';
+import './index.css'
 
 
 export default function Home()
 {
+
+
+
+    useEffect(() => {
+        console.log('component did mount')
+    },[]);
 
 
     return (
@@ -24,10 +33,10 @@ export default function Home()
                 <p>Dias</p>
             </div>
 
-            <h2 className="big">Passando pra lembrar o quão PEPEKUDA TU É!!!</h2>
-            <h2 className="relax">Precisando de uma RELAXADA?</h2>
+            <h2 className="big">Dica do dia: "A vida é arte do encontro embora haja tanto desencontro pela vida"</h2>
+            <h2 className="relax">Powell / Marcelo Peixoto / Vinicius De Moraes</h2>
             
-            <div className="container-click">
+            {/* <div className="container-click">
                 <FaHeart/>
                     <h2 className="click">Clica aqui em baixo</h2>
                 <FaHeart/>
@@ -35,11 +44,11 @@ export default function Home()
             
             <div className="container-button">
                 <a href={Gift} className="btn btn-primary" target="_blank">AQUI MESMO! <FaHeart/></a>
-            </div>
+            </div> */}
 
-            <dic className="copyright">
-                Copyright © 23/10/2020 Thiago Rivero 
-            </dic>
+            <div className="copyright">
+                Copyright © <Moment tz="America/Fortaleza" format="DD/MM/YYYY" date={new Date()} /> Thiago Rivero 
+            </div>
         </div>
     )
 }
