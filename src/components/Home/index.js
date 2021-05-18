@@ -1,6 +1,4 @@
-import React, {useEffect} from 'react';
-
-
+import React from 'react';
 
 import Button from 'react-bootstrap/Button'
 import Moment from 'react-moment';
@@ -17,13 +15,6 @@ import './index.css'
 export default function Home()
 {
 
-
-
-    useEffect(() => {
-        console.log('component did mount')
-    },[]);
-
-
     return (
         <div className="Home">
             <div className="loveName" style={{
@@ -33,8 +24,8 @@ export default function Home()
                 <p>Dias</p>
             </div>
 
-            <h2 className="big">Dica do dia: "A vida é arte do encontro embora haja tanto desencontro pela vida"</h2>
-            <h2 className="relax">Powell / Marcelo Peixoto / Vinicius De Moraes</h2>
+            <h2 className="big">Dica do dia: "Ser exigente na escolha do parceiro não é nada mais que respeito próprio"</h2>
+            <h2 className="relax">Thiago Rivero | Gabriella Dias</h2>
             
             {/* <div className="container-click">
                 <FaHeart/>
